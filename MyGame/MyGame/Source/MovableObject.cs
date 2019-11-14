@@ -19,7 +19,7 @@ namespace MyGame
 			this.rotation = rotation;
 		}
 
-		public void Update()
+		public void Update(object sender, EventArgs eventArgs)
 		{
 			velocityX = (float)((Math.Cos(rotation)) * speed);
 			velocityY = (float)((Math.Sin(rotation)) * speed);

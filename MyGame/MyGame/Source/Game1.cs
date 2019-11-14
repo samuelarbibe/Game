@@ -11,6 +11,8 @@ namespace MyGame
 	/// </summary>
 	public class Game1 : Game
 	{
+		public event EventHandler Updated;
+
 		GraphicsDeviceManager graphics;
 		MovableObject car;
 		public static int windowWidth;
@@ -52,6 +54,8 @@ namespace MyGame
 
 			//texture, position, sourceRectangle, color, rotation, origin, scale, effects, layerDepth
 			car = new MovableObject(carTexture, new Vector2(0.5f, 0.5f), null, Color.White, 0, new Vector2(carTexture.Width / 4f, carTexture.Height / 2f), new Vector2(0.1f, 0.07f), SpriteEffects.None, 0, 5, 0);
+
+			Updated += car.Update;
 		}
 
 		/// <summary>
@@ -78,12 +82,15 @@ namespace MyGame
 			{
 				car.rotation += 0.04F; // increase rotation by 2 degrees
 			}
-			else if (state.IsKeyDown(Keys.Left)){ // rotate left
+			else if (state.IsKeyDown(Keys.Left))
+			{ // rotate left
 
 				car.rotation -= 0.04F; // increase rotation by 2 degrees
-			}				
+			}
 
-			car.Update();
+			Updated(this, EventArgs.Empty);
+
+			//car.Update();
 
 			base.Update(gameTime);
 		}
@@ -95,7 +102,7 @@ namespace MyGame
 		protected override void Draw(GameTime gameTime)
 		{
 			//if (FPS++ % 5 == 0) return; // slow down
-				
+
 			graphics.GraphicsDevice.Clear(Color.WhiteSmoke);
 			G.spriteBatch.Begin();
 
@@ -103,5 +110,6 @@ namespace MyGame
 
 			G.spriteBatch.End();
 		}
+
 	}
 }
