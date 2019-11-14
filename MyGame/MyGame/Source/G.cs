@@ -14,5 +14,7 @@ namespace MyGame
 		{
 			spriteBatch = new SpriteBatch(graphicsDevice);
 		}
+
+
 	}
 }
