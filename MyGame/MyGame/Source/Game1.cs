@@ -12,13 +12,17 @@ namespace MyGame
 	/// </summary>
 	public class Game1 : Game
 	{
-		public event EventHandler Updated;
+		public static event UpdateEventHandler Updated;
+        public static event DrawEventHandler Drawed;
 
-		readonly GraphicsDeviceManager graphics;
+        readonly GraphicsDeviceManager graphics;
 		MovableObject car;
+        Drawer background;
+        Matrix mat;
+
 		public static int windowWidth;
 		public static int windowHeight;
-
+        
 
 		public Game1()
 		{
@@ -30,14 +34,12 @@ namespace MyGame
 		protected override void Initialize()
 		{
 
-			graphics.PreferredBackBufferWidth = 1920;  // set this value to the desired width of your window
-			graphics.PreferredBackBufferHeight = 1080;   // set this value to the desired height of your window
+			graphics.PreferredBackBufferWidth = 1200;  // set this value to the desired width of your window
+			graphics.PreferredBackBufferHeight = 675;   // set this value to the desired height of your window
 			graphics.ApplyChanges();
 
 			windowWidth = graphics.PreferredBackBufferWidth;
 			windowHeight = graphics.PreferredBackBufferHeight;
-
-			Drawer.showRectangle = true;
 
 			base.Initialize();
 		}
@@ -48,45 +50,35 @@ namespace MyGame
 			G.init(GraphicsDevice);
 
 			Texture2D carTexture = Content.Load<Texture2D>("car_image");
+            Texture2D backgroundTexture = Content.Load<Texture2D>("track_image_2");
 
-			//texture, position, sourceRectangle, color, rotation, origin, scale, effects, layerDepth, speed
-			car = new MovableObject(carTexture, new Vector2(0.5f, 0.5f), null, Color.White, 0, new Vector2(carTexture.Width / 4f, carTexture.Height / 2f), new Vector2(0.07f, 0.05f), SpriteEffects.None, 0, 5);
+            //texture, position, sourceRectangle, color, rotation, origin, scale, effects, layerDepth, speed
+            background = new Drawer(backgroundTexture,
+                new Vector2(0, 0),
+                null,
+                Color.White,
+                0,
+                new Vector2(0, 0),
+                new Vector2(1.3f, 1.3f),
+                SpriteEffects.None,
+                0);
 
-			Updated += car.Update;
+            car = new MovableObject(carTexture,
+                new Vector2(0.5f, 0.5f),
+                null,
+                Color.White,
+                0,
+                new Vector2(carTexture.Width / 4f, carTexture.Height / 2f),
+                new Vector2(0.07f, 0.05f),
+                SpriteEffects.None,
+                0,
+                5);
 		}
 
  
 		protected override void Update(GameTime gameTime)
 		{
-
-			KeyboardState state = Keyboard.GetState();
-
-			if (state.IsKeyDown(Keys.Up)) // increase spped
-			{
-				car.speed += 0.15F;
-			}
-
-			if (car.speed > 1) // only turn and reduce speed if car is not standing still(or very close to standing still)
-			{
-				
-				if (state.IsKeyDown(Keys.Down)) // decrease speed
-				{
-					car.speed -= 0.2F;
-				}
-
-
-				if (state.IsKeyDown(Keys.Right))// rotate right
-				{
-					car.rotation += 0.04F * car.speed / 10; // increase rotation by 2 degrees
-				}
-				else if (state.IsKeyDown(Keys.Left))
-				{ // rotate left
-
-					car.rotation -= 0.04F * car.speed / 10; // increase rotation by 2 degrees
-				}
-			}
-
-			Updated(this, EventArgs.Empty);
+			Updated?.Invoke();
 
 			base.Update(gameTime);
 		}
@@ -96,9 +88,17 @@ namespace MyGame
 		{
 
 			graphics.GraphicsDevice.Clear(Color.WhiteSmoke);
-			G.spriteBatch.Begin();
+			G.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend,
+                null, null, null, null,
+                Matrix.CreateTranslation(-car.position.X, -car.position.Y, 0)*
+                Matrix.CreateRotationZ(-car.rotation - 1.6f)*
+                Matrix.CreateScale(2f)*
+                Matrix.CreateTranslation(windowWidth/2, windowHeight/4 * 3, 0)
+                );
 
-			car.Draw();
+            
+
+            Drawed?.Invoke();
 
 			G.spriteBatch.End();
 		}

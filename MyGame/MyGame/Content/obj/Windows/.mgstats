@@ -1,2 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/top-down-car-icon-26.jpg","/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/bin/Windows/car_image.xnb","TextureProcessor","Texture2DContent",21069,10240085,0.571493
+"/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/top-down-car-icon-26.jpg","/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/bin/Windows/car_image.xnb","TextureProcessor","Texture2DContent",21069,10240085,0.452369
+"/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/track_image.jpg","/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/bin/Windows/track_image_1.xnb","TextureProcessor","Texture2DContent",38192,876181,0.033916
+"/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/track_image_2.png","/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/bin/Windows/track_image_2.xnb","TextureProcessor","Texture2DContent",49189,6297685,0.220673

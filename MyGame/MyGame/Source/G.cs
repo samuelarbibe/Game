@@ -6,7 +6,10 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MyGame
 {
-	static class G
+    public delegate void UpdateEventHandler();
+    public delegate void DrawEventHandler();
+
+    static class G
 	{
 		public static SpriteBatch spriteBatch;
 

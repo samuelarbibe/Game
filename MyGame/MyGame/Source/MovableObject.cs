@@ -8,30 +8,57 @@ namespace MyGame
 {
 	public class MovableObject : Drawer
 	{
-		public float velocityX;
-		public float velocityY;
 		public float speed;
-		public float direction;
 
 		public MovableObject(Texture2D texture, Vector2 position, Rectangle? sourceRectangle, Color color, float rotation, Vector2 origin, Vector2 scale, SpriteEffects effects, float layerDepth, float speed) : base(texture, position, sourceRectangle,color, rotation, origin, scale, effects, layerDepth) {
 
 			this.speed = speed;
 			this.rotation = rotation;
+            Game1.Updated += Update;
 		}
 
-		public void Update(object sender, EventArgs eventArgs)
+		void Update()
 		{
-			velocityX = (float)((Math.Cos(rotation)) * speed);
-			velocityY = (float)((Math.Sin(rotation)) * speed);
+            Move();
 
-			move(velocityX, velocityY);
-		}
+            Matrix mat = Matrix.CreateRotationZ(rotation);
+            Vector2 direction = Vector2.Transform(Vector2.UnitX, mat);
 
-		public void move(float velocityX, float velocityY)
-		{
-			//origin = position;
-			position.X = (position.X + (int)velocityX + Game1.windowWidth) % Game1.windowWidth;
-			position.Y = (position.Y + (int)velocityY + Game1.windowHeight) % Game1.windowHeight;
-		}
+            position += direction * speed;
+
+            //handle overflow
+            /*
+            position.X = (position.X + Game1.windowWidth)  % Game1.windowWidth;
+            position.Y = (position.Y + Game1.windowHeight) % Game1.windowHeight;
+            */
+        }
+
+        void Move()
+        {
+            KeyboardState state = Keyboard.GetState();
+
+            if (state.IsKeyDown(Keys.Up)) // increase spped
+            {
+                speed += 0.15F;
+
+                if (speed < 0) speed = 0;
+            }
+
+            if (state.IsKeyDown(Keys.Down)) // decrease speed
+            {
+                speed -= 0.2F;
+            }
+
+            if (state.IsKeyDown(Keys.Right))// rotate right
+            {
+                rotation += 0.04F * speed / 4; // increase rotation
+            }
+
+            else if (state.IsKeyDown(Keys.Left))
+            { // rotate left
+
+                rotation -= 0.04F * speed / 4; // decrease rotation 
+            }
+        }
 	}
 }

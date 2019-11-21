@@ -18,3 +18,6 @@
 /Users/samuelarbibe/Documents/Game/MyGame/MyGame/obj/x86/Debug/MyGame.csproj.CopyComplete
 /Users/samuelarbibe/Documents/Game/MyGame/MyGame/obj/x86/Debug/MyGame.exe
 /Users/samuelarbibe/Documents/Game/MyGame/MyGame/obj/x86/Debug/MyGame.pdb
+/Users/samuelarbibe/Documents/Game/MyGame/MyGame/bin/Debug/Content/track_image.xnb
+/Users/samuelarbibe/Documents/Game/MyGame/MyGame/bin/Debug/Content/track_image_1.xnb
+/Users/samuelarbibe/Documents/Game/MyGame/MyGame/bin/Debug/Content/track_image_2.xnb
