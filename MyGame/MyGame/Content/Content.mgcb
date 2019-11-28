@@ -13,6 +13,12 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin car_sound.ogg
+/importer:OggImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:car_sound.ogg
+
 #begin top-down-car-icon-26.jpg
 /importer:TextureImporter
 /processor:TextureProcessor

@@ -2,17 +2,22 @@
   <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="MyGame/Source/Game1.cs">
     <Files>
-      <File FileName="MyGame/Source/MovableObject.cs" Line="33" Column="15" />
-      <File FileName="MyGame/Source/Game1.cs" Line="97" Column="19" />
-      <File FileName="MyGame/Source/Drawer.cs" Line="42" Column="1" />
+      <File FileName="MyGame/Source/MovableObject.cs" Line="9" Column="2" />
+      <File FileName="MyGame/Source/Game1.cs" Line="77" Column="20" />
+      <File FileName="MyGame/Source/Drawer.cs" Line="1" Column="1" />
       <File FileName="MyGame/Source/Camera2d.cs" />
-      <File FileName="MyGame/Source/G.cs" Line="10" Column="45" />
+      <File FileName="MyGame/Source/G.cs" Line="12" Column="11" />
+      <File FileName="MyGame/Source/Camera.cs" Line="27" Column="66" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyGame" expanded="True">
-            <Node name="MyGame" expanded="True" />
+            <Node name="MyGame" expanded="True">
+              <Node name="Content" expanded="True" />
+              <Node name="Source" expanded="True" />
+              <Node name="x64" expanded="True" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

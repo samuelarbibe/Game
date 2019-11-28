@@ -3,14 +3,15 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-
+using Microsoft.Xna.Framework.Media;
+using MyGame.Source;
 
 namespace MyGame
 {
 	/// <summary>
 	/// This is the main type for your game.
 	/// </summary>
-	public class Game1 : Game
+	class Game1 : Game
 	{
 		public static event UpdateEventHandler Updated;
         public static event DrawEventHandler Drawed;
@@ -18,7 +19,8 @@ namespace MyGame
         readonly GraphicsDeviceManager graphics;
 		MovableObject car;
         Drawer background;
-        Matrix mat;
+        Camera cam;
+        Song song;
 
 		public static int windowWidth;
 		public static int windowHeight;
@@ -50,7 +52,7 @@ namespace MyGame
 			G.init(GraphicsDevice);
 
 			Texture2D carTexture = Content.Load<Texture2D>("car_image");
-            Texture2D backgroundTexture = Content.Load<Texture2D>("track_image_2");
+            Texture2D backgroundTexture = Content.Load<Texture2D>("track_image");
 
             //texture, position, sourceRectangle, color, rotation, origin, scale, effects, layerDepth, speed
             background = new Drawer(backgroundTexture,
@@ -73,10 +75,24 @@ namespace MyGame
                 SpriteEffects.None,
                 0,
                 5);
-		}
 
- 
-		protected override void Update(GameTime gameTime)
+            cam = new Camera(new Viewport(0, 0, windowWidth, windowHeight), car, Vector2.Zero, 0.5f);
+
+            song = Content.Load<Song>("car_sound");
+
+            MediaPlayer.Play(song);
+
+            MediaPlayer.MediaStateChanged += MediaPlayer_MediaStateChanged;
+        }
+
+        void MediaPlayer_MediaStateChanged(object sender, System.EventArgs e)
+        {
+            // 0.0f is silent, 1.0f is full volume
+            MediaPlayer.Volume -= 0.1f;
+            MediaPlayer.Play(song);
+        }
+
+        protected override void Update(GameTime gameTime)
 		{
 			Updated?.Invoke();
 
@@ -89,14 +105,8 @@ namespace MyGame
 
 			graphics.GraphicsDevice.Clear(Color.WhiteSmoke);
 			G.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend,
-                null, null, null, null,
-                Matrix.CreateTranslation(-car.position.X, -car.position.Y, 0)*
-                Matrix.CreateRotationZ(-car.rotation - 1.6f)*
-                Matrix.CreateScale(2f)*
-                Matrix.CreateTranslation(windowWidth/2, windowHeight/4 * 3, 0)
-                );
+                null, null, null, null, cam.GetMatrix());
 
-            
 
             Drawed?.Invoke();
 

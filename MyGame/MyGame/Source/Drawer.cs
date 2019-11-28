@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MyGame
 {
-	public class Drawer
+	class Drawer
 	{
 		protected Texture2D texture;
 		protected Texture2D rectangleTexture;

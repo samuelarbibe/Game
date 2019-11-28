@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MyGame
 {
-	public class MovableObject : Drawer
+	class MovableObject : Drawer
 	{
 		public float speed;
 
