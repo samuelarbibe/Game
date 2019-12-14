@@ -3,11 +3,11 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="MyGame/Source/Game1.cs">
     <Files>
       <File FileName="MyGame/Source/MovableObject.cs" Line="9" Column="2" />
-      <File FileName="MyGame/Source/Game1.cs" Line="77" Column="20" />
-      <File FileName="MyGame/Source/Drawer.cs" Line="1" Column="1" />
+      <File FileName="MyGame/Source/Game1.cs" Line="85" Column="15" />
+      <File FileName="MyGame/Source/Drawer.cs" />
       <File FileName="MyGame/Source/Camera2d.cs" />
-      <File FileName="MyGame/Source/G.cs" Line="12" Column="11" />
-      <File FileName="MyGame/Source/Camera.cs" Line="27" Column="66" />
+      <File FileName="MyGame/Source/G.cs" />
+      <File FileName="MyGame/Source/Camera.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,11 +15,16 @@
           <Node name="MyGame" expanded="True">
             <Node name="MyGame" expanded="True">
               <Node name="Content" expanded="True" />
-              <Node name="Source" expanded="True" />
-              <Node name="x64" expanded="True" selected="True" />
+              <Node name="Source" expanded="True">
+                <Node name="Game1.cs" selected="True" />
+              </Node>
+              <Node name="x64" expanded="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/track_image.jpg</SourceFile>
-  <SourceTime>2019-11-21T08:55:28+02:00</SourceTime>
-  <DestFile>/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/bin/DesktopGL/Content/track_image_1.xnb</DestFile>
-  <DestTime>2019-11-21T09:12:47.212352+02:00</DestTime>
+  <SourceFile>/Users/samuelarbibe/Documents/GitHub/Game/MyGame/MyGame/Content/track_image.jpg</SourceFile>
+  <SourceTime>2019-12-12T19:16:01.316679+02:00</SourceTime>
+  <DestFile>/Users/samuelarbibe/Documents/GitHub/Game/MyGame/MyGame/Content/bin/DesktopGL/Content/track_image_1.xnb</DestFile>
+  <DestTime>2019-12-12T19:50:44.6457134+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T18:35:14+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

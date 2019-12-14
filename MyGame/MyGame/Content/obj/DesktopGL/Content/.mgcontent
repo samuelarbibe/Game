@@ -4,10 +4,10 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/car_sound.ogg</File>
-    <File>/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/top-down-car-icon-26.jpg</File>
-    <File>/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/track_image.jpg</File>
-    <File>/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/track_image_2.png</File>
+    <File>/Users/samuelarbibe/Documents/GitHub/Game/MyGame/MyGame/Content/car_sound.ogg</File>
+    <File>/Users/samuelarbibe/Documents/GitHub/Game/MyGame/MyGame/Content/top-down-car-icon-26.jpg</File>
+    <File>/Users/samuelarbibe/Documents/GitHub/Game/MyGame/MyGame/Content/track_image.jpg</File>
+    <File>/Users/samuelarbibe/Documents/GitHub/Game/MyGame/MyGame/Content/track_image_2.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

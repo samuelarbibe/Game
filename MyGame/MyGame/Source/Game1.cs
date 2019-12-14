@@ -78,11 +78,11 @@ namespace MyGame
 
             cam = new Camera(new Viewport(0, 0, windowWidth, windowHeight), car, Vector2.Zero, 0.5f);
 
-            song = Content.Load<Song>("car_sound");
+            //song = Content.Load<Song>("car_sound");
 
-            MediaPlayer.Play(song);
+            //MediaPlayer.Play(song);
 
-            MediaPlayer.MediaStateChanged += MediaPlayer_MediaStateChanged;
+            //MediaPlayer.MediaStateChanged += MediaPlayer_MediaStateChanged;
         }
 
         void MediaPlayer_MediaStateChanged(object sender, System.EventArgs e)
