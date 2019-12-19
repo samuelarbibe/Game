@@ -9,7 +9,7 @@ namespace MyGame
 	class Drawer
 	{
 		protected Texture2D texture;
-		protected Texture2D rectangleTexture;
+		//protected Texture2D rectangleTexture;
 		protected Rectangle? sourceRectangle;
 		public Vector2 position;
 		protected Color color;
