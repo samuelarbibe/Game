@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/top-down-car-icon-26.jpg</SourceFile>
-  <SourceTime>2019-11-14T09:19:38+02:00</SourceTime>
-  <DestFile>/Users/samuelarbibe/Documents/Game/MyGame/MyGame/Content/bin/DesktopGL/Content/car_image.xnb</DestFile>
-  <DestTime>2019-12-19T09:42:04.5478681+02:00</DestTime>
+  <SourceFile>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/top-down-car-icon-26.jpg</SourceFile>
+  <SourceTime>2019-12-23T15:20:36.7486943+02:00</SourceTime>
+  <DestFile>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/DesktopGL/Content/car_image.xnb</DestFile>
+  <DestTime>2020-01-09T09:37:31.2923477+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T18:35:14+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -12,6 +12,7 @@ namespace MyGame.Source
         public abstract bool GoDown();
         public abstract bool GoLeft();
         public abstract bool GoRight();
+        public abstract void SetMe(IFocus me);
     }
 
     class UserKeys : BaseKeys
@@ -44,6 +45,75 @@ namespace MyGame.Source
         public override bool GoRight()
         {
             return G.keyboardState.IsKeyDown(rightKey);
+        }
+
+        public override void SetMe(IFocus me)
+        {
+        }
+    }
+
+    class BotKeys : BaseKeys
+    {
+        bool up, down, left, right;
+        IFocus target, me;
+
+        public BotKeys(IFocus target, bool up = false, bool down = false, bool left = false, bool right = false)
+        {
+            this.up = up;
+            this.down = down;
+            this.left = left;
+            this.right = right;
+            this.target = target;
+            Game1.Updated += this.AI;
+        }
+
+        public override bool GoUp()
+        {
+            return up;
+        }
+
+        public override bool GoDown()
+        {
+            return down;
+        }
+
+        public override bool GoLeft()
+        {
+            return left;
+        }
+
+        public override bool GoRight()
+        {
+            return right;
+        }
+
+        public override void SetMe(IFocus me)
+        {
+            this.me = me;
+        }
+
+        void AI()
+        {
+            left = right = up = false;
+
+            Vector2 distance = target.position - me.position;
+            float wantedRotation = (float)Math.Atan2(distance.X, -distance.Y);
+            float rotationDelta = MathHelper.WrapAngle(wantedRotation - me.rotation);
+
+            if(distance.Length() > 200)
+            {
+                up = true;
+                if (rotationDelta > 0.1f) 
+                {
+                    right = true;
+                    Console.WriteLine("right");
+                }
+                else if(rotationDelta < 0.1f)
+                {
+                    left = true;
+                    Console.WriteLine("left");
+                }
+            }
         }
     }
 }

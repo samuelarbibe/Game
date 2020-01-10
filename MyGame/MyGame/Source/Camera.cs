@@ -6,17 +6,23 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MyGame.Source
 {
+    interface IFocus
+    {
+        Vector2 position { get; }
+        float rotation { get; }
+    }
+
     class Camera
     {
         Viewport vp;
-        List<MovableObject> focus;
+        List<IFocus> focus;
         Vector2 pos;
         float rotation;
         float zoom;
         float maxZoom;
         float minZoom;
 
-        public Camera(Viewport vp, List<MovableObject> focus, Vector2 position, float zoom)
+        public Camera(Viewport vp, List<IFocus> focus, Vector2 position, float zoom)
         {
             this.vp = vp;
             this.focus = focus;
@@ -37,7 +43,7 @@ namespace MyGame.Source
                 sum += focus[count].position;
             }
 
-            sum /= count + 1;
+            sum /= focus.Count;
 
             for (count = 0; count < focus.Count; count++)
             {
@@ -49,14 +55,14 @@ namespace MyGame.Source
                 }
             }
 
-            if (maxDist > ((vp.Height / zoom) - 800f))
+            if (maxDist > ((vp.Height / 2) - 100f) && zoom > 0.6f)
             {
                 zoom -= (maxDist / ((vp.Height / zoom)))/100;
             }
 
-            else if(maxDist < ((vp.Height / zoom) + 800f))
+            else if(maxDist < ((vp.Height / 2) + 100f) && zoom < 0.8f)
             {
-                zoom += (maxDist / ((vp.Height / zoom))) / 200;
+                zoom += (maxDist / ((vp.Height / zoom))) / 100;
             }
 
             if (zoom > maxZoom) zoom = maxZoom;

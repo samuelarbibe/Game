@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MyGame.Source;
 
 namespace MyGame
 {
-	class Drawer
+	class Drawer : IFocus
 	{
 		protected Texture2D texture;
 		//protected Texture2D rectangleTexture;
 		protected Rectangle? sourceRectangle;
-		public Vector2 position;
+		public Vector2 position { get; set;}
 		protected Color color;
-		public float rotation;
+		public float rotation { get; set;}
 		protected Vector2 origin;
 		protected Vector2 scale;
 		protected SpriteEffects effects;

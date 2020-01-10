@@ -1,14 +1,13 @@
 ﻿<Properties StartupConfiguration="{D8B79DD1-30C5-45ED-8B95-35B992FE2144}|Default">
   <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyGame/Source/Camera.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyGame/Source/Input.cs">
     <Files>
-      <File FileName="MyGame/Source/MovableObject.cs" Line="23" Column="14" />
-      <File FileName="MyGame/Source/Game1.cs" Line="94" Column="98" />
-      <File FileName="MyGame/Source/Drawer.cs" Line="12" Column="5" />
-      <File FileName="MyGame/Source/Camera2d.cs" />
+      <File FileName="MyGame/Source/MovableObject.cs" Line="50" Column="55" />
+      <File FileName="MyGame/Source/Game1.cs" Line="83" Column="42" />
+      <File FileName="MyGame/Source/Drawer.cs" Line="17" Column="36" />
       <File FileName="MyGame/Source/G.cs" Line="10" Column="42" />
-      <File FileName="MyGame/Source/Camera.cs" Line="69" Column="21" />
-      <File FileName="MyGame/Source/Input.cs" Line="31" Column="1" />
+      <File FileName="MyGame/Source/Camera.cs" Line="16" Column="6" />
+      <File FileName="MyGame/Source/Input.cs" Line="91" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +16,7 @@
             <Node name="MyGame" expanded="True">
               <Node name="Content" expanded="True" />
               <Node name="Source" expanded="True">
-                <Node name="Camera.cs" selected="True" />
+                <Node name="Input.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -26,7 +25,8 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug_MacOS" />
+  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

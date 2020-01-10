@@ -17,7 +17,7 @@ namespace MyGame
         public static event DrawEventHandler Drawed;
 
         readonly GraphicsDeviceManager graphics;
-        List<MovableObject> cars;
+        List<IFocus> cars;
         Drawer background;
         Camera cam;
 
@@ -52,7 +52,8 @@ namespace MyGame
 
 			Texture2D carTexture = Content.Load<Texture2D>("car_image");
             Texture2D backgroundTexture = Content.Load<Texture2D>("track_image_2");
-            
+
+            cars = new List<IFocus>();
 
             //texture, position, sourceRectangle, color, rotation, origin, scale, effects, layerDepth, speed
             background = new Drawer(backgroundTexture,
@@ -64,8 +65,8 @@ namespace MyGame
                 new Vector2(1.3f, 1.3f),
                 SpriteEffects.None,
                 0);
-            cars = new List<MovableObject>{
-                new MovableObject(
+
+            cars.Add(new MovableObject(
                     new UserKeys(Keys.W, Keys.S, Keys.A, Keys.D),
                     carTexture,
                     new Vector2(0.5f, 0.5f),
@@ -76,9 +77,10 @@ namespace MyGame
                     new Vector2(0.07f, 0.05f),
                     SpriteEffects.None,
                     0,
-                    5),
-                new MovableObject(
-                    new UserKeys(Keys.Up, Keys.Down, Keys.Left, Keys.Right),
+                    0));
+
+            cars.Add(new MovableObject(
+                    new BotKeys(cars[0]),
                     carTexture,
                     new Vector2(0.5f, 0.5f),
                     null,
@@ -88,11 +90,9 @@ namespace MyGame
                     new Vector2(0.07f, 0.05f),
                     SpriteEffects.None,
                     0,
-                    5)
-                };
+                    0));
 
             cam = new Camera(new Viewport(0, 0, windowWidth, windowHeight), cars, Vector2.Zero, 1f);
-
         }
 
         protected override void Update(GameTime gameTime)
@@ -102,7 +102,7 @@ namespace MyGame
 			base.Update(gameTime);
 		}
 
- 
+
 		protected override void Draw(GameTime gameTime)
 		{
 
