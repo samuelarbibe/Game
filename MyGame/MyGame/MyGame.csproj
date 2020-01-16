@@ -50,6 +50,8 @@
     <Compile Include="Source\MovableObject.cs" />
     <Compile Include="Source\Camera.cs" />
     <Compile Include="Source\Input.cs" />
+    <Compile Include="Source\Car.cs" />
+    <Compile Include="Source\Engine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />

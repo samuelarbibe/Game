@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MyGame.Source
 {
-    abstract class BaseKeys
+    public abstract class BaseKeys
     {
         public abstract bool GoUp();
         public abstract bool GoDown();
@@ -15,7 +15,7 @@ namespace MyGame.Source
         public abstract void SetMe(IFocus me);
     }
 
-    class UserKeys : BaseKeys
+    public class UserKeys : BaseKeys
     {
         Keys upKey, downKey, leftKey, rightKey;
 
@@ -52,7 +52,7 @@ namespace MyGame.Source
         }
     }
 
-    class BotKeys : BaseKeys
+    public class BotKeys : BaseKeys
     {
         bool up, down, left, right;
         IFocus target, me;
@@ -94,26 +94,33 @@ namespace MyGame.Source
 
         void AI()
         {
-            left = right = up = false;
+            left = right = up = down = false;
 
             Vector2 distance = target.position - me.position;
             float wantedRotation = (float)Math.Atan2(distance.X, -distance.Y);
             float rotationDelta = MathHelper.WrapAngle(wantedRotation - me.rotation);
 
-            if(distance.Length() > 200)
+            Console.WriteLine(wantedRotation);
+            //Console.WriteLine("target->" + target.rotation);
+
+            if (distance.Length() > 300)
             {
                 up = true;
-                if (rotationDelta > 0.1f) 
+                if (rotationDelta > 0.1f)
                 {
                     right = true;
-                    Console.WriteLine("right");
+
                 }
-                else if(rotationDelta < 0.1f)
+                else if (rotationDelta < 0.1f)
                 {
                     left = true;
-                    Console.WriteLine("left");
+                }
+                else
+                {
+                    right = left = false;
                 }
             }
+            else down = true;
         }
     }
 }

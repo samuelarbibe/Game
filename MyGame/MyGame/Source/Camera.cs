@@ -6,13 +6,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MyGame.Source
 {
-    interface IFocus
+    public interface IFocus
     {
         Vector2 position { get; }
         float rotation { get; }
     }
 
-    class Camera
+    public class Camera
     {
         Viewport vp;
         List<IFocus> focus;

@@ -9,12 +9,13 @@
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/MonoGame.Framework.dll.config
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/libopenal.1.dylib
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/libSDL2-2.0.0.dylib
-/Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/car_image.xnb
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/track_image.xnb
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/track_image_1.xnb
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/car_sound.mp3
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/track_image_2.xnb
+/Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/car_image_1.xnb
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/car_sound.xnb
+/Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/top-down-car-icon-26.xnb
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/car_sound.wma
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/MyGame.exe
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/MonoGame.Framework.dll

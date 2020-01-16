@@ -50,7 +50,7 @@ namespace MyGame
 		{
 			G.init(GraphicsDevice);
 
-			Texture2D carTexture = Content.Load<Texture2D>("car_image");
+			Texture2D carTexture = Content.Load<Texture2D>("car_image_1");
             Texture2D backgroundTexture = Content.Load<Texture2D>("track_image_2");
 
             cars = new List<IFocus>();
@@ -66,7 +66,7 @@ namespace MyGame
                 SpriteEffects.None,
                 0);
 
-            cars.Add(new MovableObject(
+            cars.Add(new Car(
                     new UserKeys(Keys.W, Keys.S, Keys.A, Keys.D),
                     carTexture,
                     new Vector2(0.5f, 0.5f),
@@ -74,12 +74,12 @@ namespace MyGame
                     Color.White,
                     0,
                     new Vector2(carTexture.Width / 4f, carTexture.Height / 2f),
-                    new Vector2(0.07f, 0.05f),
+                    new Vector2(0.05f, 0.07f),
                     SpriteEffects.None,
                     0,
                     0));
 
-            cars.Add(new MovableObject(
+            cars.Add(new Car(
                     new BotKeys(cars[0]),
                     carTexture,
                     new Vector2(0.5f, 0.5f),
@@ -87,7 +87,7 @@ namespace MyGame
                     Color.White,
                     0,
                     new Vector2(carTexture.Width / 4f, carTexture.Height / 2f),
-                    new Vector2(0.07f, 0.05f),
+                    new Vector2(0.05f, 0.07f),
                     SpriteEffects.None,
                     0,
                     0));

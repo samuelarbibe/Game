@@ -9,6 +9,7 @@ namespace MyGame
 	class MovableObject : Drawer
 	{
 		public float speed;
+        public float accelaration;
         public BaseKeys directionKeys;
     
 
@@ -24,13 +25,18 @@ namespace MyGame
 		void Update()
 		{
             Matrix mat = Matrix.CreateRotationZ(rotation);
-            Vector2 direction = Vector2.Transform(Vector2.UnitX, mat);
+            Vector2 direction = Vector2.Transform(-Vector2.UnitY, mat);
 
-            Move();
+            //Move();
+
+            speed += accelaration;
+
+            if (speed < 0) speed = 0;
 
             position += direction * speed;
-        }
 
+        }
+        /*
         void Move()
         {
             if (directionKeys.GoUp()) // increase spped
@@ -56,5 +62,6 @@ namespace MyGame
                 rotation -= 0.1F; // decrease rotation 
             }
         }
+        */
 	}
 }

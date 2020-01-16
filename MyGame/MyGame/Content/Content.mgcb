@@ -19,7 +19,7 @@
 /processorParam:Quality=Best
 /build:car_sound.ogg
 
-#begin top-down-car-icon-26.jpg
+#begin top-down-car-icon-26.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -29,7 +29,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:top-down-car-icon-26.jpg;car_image.jpg
+/build:top-down-car-icon-26.png;car_image_1.png
 
 #begin track_image.jpg
 /importer:TextureImporter
