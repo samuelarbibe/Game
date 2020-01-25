@@ -94,33 +94,33 @@ namespace MyGame.Source
 
         void AI()
         {
+
             left = right = up = down = false;
 
             Vector2 distance = target.position - me.position;
             float wantedRotation = (float)Math.Atan2(distance.X, -distance.Y);
             float rotationDelta = MathHelper.WrapAngle(wantedRotation - me.rotation);
 
-            Console.WriteLine(wantedRotation);
-            //Console.WriteLine("target->" + target.rotation);
-
+            
             if (distance.Length() > 300)
             {
-                up = true;
-                if (rotationDelta > 0.1f)
-                {
-                    right = true;
-
-                }
-                else if (rotationDelta < 0.1f)
-                {
-                    left = true;
-                }
-                else
-                {
-                    right = left = false;
-                }
+                up = true; 
             }
-            else down = true;
+            else
+            {
+                rotationDelta = 0;
+                down = true;
+            }
+
+            if (rotationDelta > 0f)
+            {
+                right = true;
+
+            }
+            else if (rotationDelta < 0f)
+            {
+                left = true;
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ namespace MyGame.Source
         {
             // calculate Torque
             this.Torque = 60;
-            this.brakeTorque = -100;
+            this.brakeTorque = -170;
             this.maxSteeringRotation = maxSteeringRotation;
             this.NGR = NGR;
         }
@@ -30,10 +30,13 @@ namespace MyGame.Source
         {
             actualTorque = -20;
 
-            if (keys.GoLeft()) steeringRotation -= 0.05f;
-            else if (keys.GoRight()) steeringRotation += 0.05f;
+            if (keys.GoLeft()) steeringRotation += -0.1f;
+            else if (keys.GoRight()) steeringRotation += 0.1f;
+            else if (steeringRotation > 0) steeringRotation += -0.1f;
             else if (steeringRotation < 0) steeringRotation += 0.1f;
-            else if (steeringRotation > 0) steeringRotation -= 0.1f;
+
+            //else if (steeringRotation < 0) steeringRotation += 0.2f;
+            //else if (steeringRotation > 0) steeringRotation -= 0.2f;
 
             //steeringRotation += 1 / 100;
 
