@@ -1,5 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/car_sound.ogg","/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/car_sound.xnb","SongProcessor","SongContent",46784,127,0.25495
-"/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/top-down-car-icon-26.png","/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/car_image_1.xnb","TextureProcessor","Texture2DContent",75334,10240085,0.375112
-"/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/track_image.jpg","/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/track_image_1.xnb","TextureProcessor","Texture2DContent",38192,876181,0.048091
-"/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/track_image_2.png","/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/track_image_2.xnb","TextureProcessor","Texture2DContent",49189,6297685,0.23166
+"/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/car_sound.ogg","/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/car_sound.xnb","SongProcessor","SongContent",46784,127,0.171527
+"/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/top-down-car-icon-26.png","/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/car_image_1.xnb","TextureProcessor","Texture2DContent",75334,10240085,0.367484
+"/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/track_image.jpg","/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/track_image_1.xnb","TextureProcessor","Texture2DContent",38192,876181,0.039379
+"/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/track_image_2.png","/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/track_image_2.xnb","TextureProcessor","Texture2DContent",49189,6297685,0.211728
+"/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/trackmask.png","/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/trackmask.xnb","TextureProcessor","Texture2DContent",5337,876181,0.166148

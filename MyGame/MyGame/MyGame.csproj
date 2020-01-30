@@ -40,6 +40,7 @@
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Source\Input.cs" />
     <Compile Include="Source\Car.cs" />
     <Compile Include="Source\Engine.cs" />
+    <Compile Include="Source\Map.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />

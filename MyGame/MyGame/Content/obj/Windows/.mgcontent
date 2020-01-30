@@ -8,11 +8,13 @@
     <File>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/top-down-car-icon-26.png</File>
     <File>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/track_image.jpg</File>
     <File>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/track_image_2.png</File>
+    <File>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/trackmask.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
     <File>car_image_1.png</File>
     <File>track_image_1.jpg</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

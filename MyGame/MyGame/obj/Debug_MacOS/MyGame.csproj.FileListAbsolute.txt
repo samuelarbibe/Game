@@ -23,3 +23,4 @@
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/obj/Debug_MacOS/MyGame.csproj.CopyComplete
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/obj/Debug_MacOS/MyGame.exe
 /Users/samuelarbibe/Github/Game/MyGame/MyGame/obj/Debug_MacOS/MyGame.csprojAssemblyReference.cache
+/Users/samuelarbibe/Github/Game/MyGame/MyGame/bin/Debug_MacOS/Content/trackmask.xnb

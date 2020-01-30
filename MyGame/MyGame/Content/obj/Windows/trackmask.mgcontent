@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/top-down-car-icon-26.png</SourceFile>
-  <SourceTime>2020-01-16T09:14:55.532586+02:00</SourceTime>
-  <DestFile>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/car_image_1.xnb</DestFile>
-  <DestTime>2020-01-30T09:59:56.1911211+02:00</DestTime>
+  <SourceFile>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/trackmask.png</SourceFile>
+  <SourceTime>2020-01-30T10:51:54+02:00</SourceTime>
+  <DestFile>/Users/samuelarbibe/Github/Game/MyGame/MyGame/Content/bin/Windows/trackmask.xnb</DestFile>
+  <DestTime>2020-01-30T10:52:44.3111732+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T18:35:14+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

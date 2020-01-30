@@ -1,23 +1,23 @@
 ﻿<Properties StartupConfiguration="{D8B79DD1-30C5-45ED-8B95-35B992FE2144}|Default">
   <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyGame/Source/Input.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyGame/Source/Map.cs">
     <Files>
-      <File FileName="MyGame/Source/Car.cs" Line="29" Column="30" />
-      <File FileName="MyGame/Source/MovableObject.cs" />
-      <File FileName="MyGame/Source/Engine.cs" Line="36" Column="64" />
-      <File FileName="MyGame/Source/Input.cs" Line="103" Column="1" />
-      <File FileName="MyGame/Source/Camera.cs" Line="20" Column="15" />
-      <File FileName="MyGame/Source/Game1.cs" Line="1" Column="1" />
-      <File FileName="MyGame/Source/Drawer.cs" />
+      <File FileName="MyGame/Source/G.cs" Line="17" Column="35" />
+      <File FileName="MyGame/Source/Game1.cs" Line="54" Column="46" />
+      <File FileName="MyGame/Source/Camera.cs" Line="1" Column="1" />
+      <File FileName="MyGame/Source/Input.cs" Line="1" Column="1" />
+      <File FileName="MyGame/Source/Map.cs" Line="35" Column="22" />
+      <File FileName="MyGame/Source/Drawer.cs" Line="1" Column="1" />
+      <File FileName="MyGame/Source/Engine.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyGame" expanded="True">
             <Node name="MyGame" expanded="True">
-              <Node name="Content" expanded="True" />
+              <Node name="References" expanded="True" />
               <Node name="Source" expanded="True">
-                <Node name="Input.cs" selected="True" />
+                <Node name="Map.cs" selected="True" />
               </Node>
             </Node>
           </Node>

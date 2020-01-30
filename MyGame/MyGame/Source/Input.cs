@@ -101,7 +101,6 @@ namespace MyGame.Source
             float wantedRotation = (float)Math.Atan2(distance.X, -distance.Y);
             float rotationDelta = MathHelper.WrapAngle(wantedRotation - me.rotation);
 
-            
             if (distance.Length() > 300)
             {
                 up = true; 

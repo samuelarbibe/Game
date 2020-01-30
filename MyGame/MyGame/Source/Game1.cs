@@ -50,8 +50,11 @@ namespace MyGame
 		{
 			G.init(GraphicsDevice);
 
-			Texture2D carTexture = Content.Load<Texture2D>("car_image_1");
-            Texture2D backgroundTexture = Content.Load<Texture2D>("track_image_2");
+            Texture2D maskTexture = Content.Load<Texture2D>("trackmask");
+            G.maskMap = new Map(maskTexture);
+
+            Texture2D carTexture = Content.Load<Texture2D>("car_image_1");
+            Texture2D backgroundTexture = Content.Load<Texture2D>("track_image");
 
             cars = new List<IFocus>();
 
@@ -62,7 +65,7 @@ namespace MyGame
                 Color.White,
                 0,
                 new Vector2(0, 0),
-                new Vector2(1.3f, 1.3f),
+                new Vector2(G.scale, G.scale),
                 SpriteEffects.None,
                 0);
 
@@ -79,18 +82,21 @@ namespace MyGame
                     0,
                     0));
 
-            cars.Add(new Car(
-                    new BotKeys(cars[0]),
-                    carTexture,
-                    new Vector2(0.5f, 0.5f),
-                    null,
-                    Color.White,
-                    0,
-                    new Vector2(carTexture.Width / 4f, carTexture.Height / 2f),
-                    new Vector2(0.05f, 0.07f),
-                    SpriteEffects.None,
-                    0,
-                    0));
+            for (int i = 0; i < 10; i++)
+            {
+                cars.Add(new Car(
+                        new BotKeys(cars[0]),
+                        carTexture,
+                        new Vector2(i*10, i*10),
+                        null,
+                        Color.White,
+                        0,
+                        new Vector2(carTexture.Width / 4f, carTexture.Height / 2f),
+                        new Vector2(0.05f, 0.07f),
+                        SpriteEffects.None,
+                        0,
+                        0));
+            }
 
             cam = new Camera(new Viewport(0, 0, windowWidth, windowHeight), cars, Vector2.Zero, 1f);
         }
